@@ -8,17 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Professor Workspace</title>
+    <style>
+        <%@include file="/resources/css/professor-style.css"%>
+    </style>
 </head>
 <body>
 
+<h2>Select semester</h2>
+<form action="professor" method="post" >
 
-
-<form action="professor" method="post">
-    Year <input type="number" name="yearCurrent" id="text1" /> <br/>
-    Semester <input type="number" name="semesterCurrent" id="text2" /> <br/>
-    Id Professor <input type="text" name="idProfessor" id="text3" /> <br/>
-    Id Professor <input type="submit" id="submit" /> <br/>
+    <input type="number" name="yearCurrent" id="currentYear" placeholder="Year"/> <br/>
+    <input type="number" name="semesterCurrent" id="currentSemester" placeholder="Semester"/> <br/>
+    <input type="text" name="idProfessor" id="professorId" placeholder="Professor Id"/> <br/>
+    <input type="submit" id="submit" text="Select"/> <br/>
 </form>
 
 

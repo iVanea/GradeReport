@@ -62,9 +62,6 @@ public void part2(HttpServletRequest request, HttpServletResponse response) thro
     request.setAttribute("gradeReports", gradeReportDAO.getAllStudentForCourse(yearCur,semCur,idStud,idC,idProf));
     RequestDispatcher requestDispatcher= request.getRequestDispatcher("WEB-INF/views/gradeReportProfessor.jsp");
     requestDispatcher.forward(request,response);
-
-
-
 }
 
 
