@@ -53,6 +53,9 @@ public class CourseDAO {
         return CourseBd.get(CoursesId);
     }
 
+    public String getCourseNameById(int id){
+        return CourseBd.get(id).getNameCourse();
+    }
 
 
 

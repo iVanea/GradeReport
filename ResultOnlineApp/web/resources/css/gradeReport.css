@@ -1,0 +1,104 @@
+caption{
+    font-family: "Times New Roman";
+    font-size:16pt;
+}
+table, td, th {
+    border: 2px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    background-color: gold;
+    text-align: center;
+    width: 30%;
+}
+
+.selectedRow{
+    background-color:coral;
+}
+
+#tableStudents{
+    width: 22%;
+    float:left;
+    overflow: auto;
+}
+#tableGrade{
+    width: 60%;
+    margin-left: 35%;
+    padding-left: 5px;
+    overflow: auto;
+    border-collapse: separate;
+    border-spacing: 0px;
+
+}
+
+#inputGradeForm{
+    padding-left: 5px;
+    margin-left: 35%;
+    width:60%;
+}
+#inputGradeForm:after{
+    content: "";
+    display: block;
+    clear:both;
+}
+#inputGradeForm label{
+    width:50px;
+    margin:1px;
+    text-align: right;
+}
+
+
+input[type="text"]{
+    margin-left: 5px;
+}
+#btnClick{
+    margin-left: 5px;
+}
+header{
+    position: fixed;
+    background-color: teal;
+    width: 100%;
+    /*border:2px blanchedalmond solid;*/
+    top:0px;
+    left:0px;
+    z-index: 1;
+}
+.barCourse h3{
+    margin: 20px;
+    width:400px;
+    float:left;
+}
+.barCourse p{
+    position:absolute;
+    margin-right:10px;
+    padding:0px;
+    right:0px;
+    top:0px;
+}
+.barCourse button{
+    position:absolute;
+    margin-right:20px;
+    padding:0px;
+    right:0px;
+    bottom:5px;
+    width: 120px;
+    height: 24px;
+    background-color: coral;
+    color:teal;
+    border-radius: 10px;
+    border:1px solid gold;
+}
+header div:after{
+    content: "";
+    display: block;
+    clear:both;
+}
+#content{
+    position: relative;
+    top:50px;
+    padding: 10px;
+    margin:5px;
+}
+

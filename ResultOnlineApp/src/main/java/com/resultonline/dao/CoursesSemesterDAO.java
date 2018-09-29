@@ -1,6 +1,7 @@
 package com.resultonline.dao;
 
 import com.resultonline.model.CoursesSemester;
+import com.resultonline.model.Courses;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,9 +13,9 @@ public class CoursesSemesterDAO {
     Map<Integer,CoursesSemester> coursesSemesterBd = new HashMap<>();
 
     {
-        coursesSemesterBd.put(1,new CoursesSemester(1, 2018, 1,1,"jean1") );
-        coursesSemesterBd.put(2,new CoursesSemester(2, 2018, 1,2,"jean2") );
-        coursesSemesterBd.put(3,new CoursesSemester(3, 2018, 1,3,"ion3") );
+        coursesSemesterBd.put(1,new CoursesSemester(1, 2018, 1,1,"jCharles") );
+        coursesSemesterBd.put(2,new CoursesSemester(2, 2018, 1,2,"mWoods") );
+        coursesSemesterBd.put(3,new CoursesSemester(3, 2018, 1,3,"aChelsea") );
        /* coursesSemesterBd.put(4,new CoursesSemester(4, 2018, 1,4) );
         coursesSemesterBd.put(5,new CoursesSemester(3, 2018, 1,5) );
         coursesSemesterBd.put(6,new CoursesSemester(6, 2018, 1,6) );
@@ -63,9 +64,27 @@ public class CoursesSemesterDAO {
 
 
 
+    public int getCourseIdBySemesterId(int id){
+            CoursesSemester courseSemester = coursesSemesterBd.get(id);
+        return courseSemester.getIdCourse();
+    }
 
+    public int getCourseIdByProfessorId(String sid){
+        List<CoursesSemester> courses = getAllCoursesSemester();
+        boolean found = false;
+        for(CoursesSemester c : courses){
+            if(found)
+                break;
 
+            if(c.getIdProfessor().equals(sid)){
+                found = true;
+                return c.getIdCourse();
+            }
 
+        }
+
+        return 0;
+    }
 
 
 }

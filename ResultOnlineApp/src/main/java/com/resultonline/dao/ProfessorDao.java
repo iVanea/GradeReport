@@ -10,9 +10,10 @@ public class ProfessorDao {
 private List<Professor>  professorBd = new ArrayList<>();
 
     {
-        professorBd.add(new Professor("jean1","jean","charles"));
-        professorBd.add(new Professor("chris2","chris","chrisner"));
-        professorBd.add(new Professor("ion3","ion","ion"));
+        professorBd.add(new Professor("jCharles","Jean","Charles"));
+        professorBd.add(new Professor("jChris","Jean","Chrisner"));
+        professorBd.add(new Professor("aChelsea","Alejandro","Chelsea"));
+        professorBd.add(new Professor("mWoods","Michael","Woods"));
     }
 
 
@@ -32,6 +33,15 @@ private List<Professor>  professorBd = new ArrayList<>();
 
     public List<Professor> getAllProfessor(){
         return new ArrayList<>(professorBd);
+    }
+    public Professor getProfessorById(String id){
+        for (Professor prof: professorBd){
+            if (prof.getIdProfessor().equals(id)){
+
+                return prof;
+            }
+        }
+        return null;
     }
 
     public boolean checkProfessorExist(String idProfessor,String name){

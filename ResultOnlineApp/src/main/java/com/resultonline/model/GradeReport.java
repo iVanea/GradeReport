@@ -19,14 +19,9 @@ public class GradeReport {
         this.grade = grade;
     }
 
-    public GradeReport(int idGradeReport, int year, int semester, int idStudent, int idCourse, String idProfessor, double grade) {
-        this.idGradeReport = idGradeReport;
-        this.year = year;
-        this.semester = semester;
-        this.idStudent = idStudent;
-        this.idCourse = idCourse;
-        this.idProfessor = idProfessor;
-        this.grade = grade;
+    //TODO: this addd for defaul construct
+    public GradeReport(){
+
     }
 
     public int getYear() {

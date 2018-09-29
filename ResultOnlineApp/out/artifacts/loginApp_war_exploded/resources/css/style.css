@@ -1,0 +1,48 @@
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+}
+#firstPart tr:nth-child(even) {
+    background: #D8ECF9;
+    font-weight: bold;
+    }
+
+th, td{
+    text-align:left;
+    border: #000000 1px solid;
+    padding: 5px;
+}
+
+th{
+    background-color: #6495ED;
+    color: #ffffff;
+}
+
+#firstPart, #secondPart{
+   margin: 0 auto;
+}
+
+fieldset{
+    margin: auto;
+    width: 300px;
+}
+
+.lb {
+    width:100px;
+    background-color: aqua;
+    float: left;
+}
+
+main{
+    width: 900px;
+    margin:0 auto;
+}
+.classInput1{
+    float: left;
+    margin-left:10px;
+}
+
+.clearfix{
+    clear: left;
+}

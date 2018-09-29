@@ -11,6 +11,7 @@ public class GradeReportDAO {
 
     private EnrollACourseDAO enrollACourseDAO ;
     List<EnrollACourse> list = new ArrayList<>();
+
     public List<EnrollACourse> getAllStudentForCourse(int year, int semester, int idStudent, int idCourse, String idProfessor){
             for(Map.Entry<Integer,EnrollACourse> e :   enrollACourseDAO.enrollACourseBd.entrySet()){
 
@@ -24,11 +25,14 @@ public class GradeReportDAO {
        return list;
     }
 
-
+//TODO ADDhere grade
     public void addGradeReport( GradeReport gradeReport){
        gradeReportBd.put(gradeReport.getIdGradeReport(),gradeReport);
     }
 
+//    public List<GradeReport> getAllGradesForCourse(){
+//        gradeReportBd.ge
+//    }
 
     public int gradeReportId() {
         return gradeReportBd.size()+1;

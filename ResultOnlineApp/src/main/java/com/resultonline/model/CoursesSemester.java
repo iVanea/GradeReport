@@ -13,12 +13,15 @@ public class CoursesSemester {
         this.year = year;
         this.semester = semester;
         this.idCourse = idCourse;
+        this.idProfessor = idProfessor;
     }
 
     public CoursesSemester(int year, int semester, int idCourse) {
         this.year = year;
         this.semester = semester;
         this.idCourse = idCourse;
+        this.idCoursesSemester = semester;
+        this.idProfessor = "mWood";
     }
 
 
@@ -72,6 +75,7 @@ public class CoursesSemester {
     public void setIdProfessor(String idProfessor) {
         this.idProfessor = idProfessor;
     }
+
 
     @Override
     public boolean equals(Object o) {
